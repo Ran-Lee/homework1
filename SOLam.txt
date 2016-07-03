@@ -1,0 +1,89 @@
+create table student(
+
+ id int primary key AUTO_INCREMENT ,
+ 
+ name varchar(8) not null,
+ 
+ stunumber varchar(12) not null,
+  
+ heavy int not null,
+ 
+ xuefei int 
+ 
+ )  
+ 
+ insert into student (name,stunumber,heavy,xuefei) VALUES
+ 
+ ('wang','1313080712',65,10000)
+ 
+ 
+ delete from student WHERE xuefei=10000
+ 
+ INSERT  into students(name,stunumber,heavy,xuefei) values
+('wang' , '1313',65,10000) 
+ 
+  INSERT  into students(name,stunumber,heavy,xuefei) values
+('li' , '1314',67,10000)
+
+ INSERT  into students(name,stunumber,heavy,xuefei) values
+('chen' , '1315',70,10000)
+ INSERT  into students(name,stunumber,heavy,xuefei) values
+('liu' , '1316',50,5000)
+
+create table teachers(
+
+ id int primary key AUTO_INCREMENT,
+ 
+ name varchar(8) not null,
+ 
+ teanumber int not null,
+ 
+ tall int not null,
+ 
+ )
+drop table teachers
+
+create table teachers(
+
+ id int primary key AUTO_INCREMENT,
+ 
+ name varchar(8) not null,
+ 
+ teanumber int not null, 
+ 
+ salary int 
+ 
+ )
+ 
+ insert into teachers(name,teanumber,salary)values
+ 
+ ('Mr.liu','10001',6000)
+ 
+ insert into teachers(name,teanumber,salary)values
+ ('Mr.guan','10002',8000)
+ 
+ insert into teachers(name,teanumber,salary)values
+ ('Mr.bai','10003',9000)
+
+delete from students where heavy<66
+
+  INSERT  into students(name,stunumber,heavy,xuefei) values
+('Qiu' , '1318',78,9000)
+  INSERT  into students(name,stunumber,heavy,xuefei) values
+('Zhao' , '1319',69,6000)
+  INSERT  into students(name,stunumber,heavy,xuefei) values
+('li' , '1320',80,4000)
+
+delete from teachers where salary between 3000 and 7000
+
+UPDATE students set name ='shuai',stunumber=1313 where name='li'
+
+update students set name='be',xuefei =20000 where name='shuai'
+
+select name,xuefei from students
+
+select name,stunumber from students where  xuefei>10000
+
+select * from students where students.stunumber>1310
+
+select * from students where stunumber>1310

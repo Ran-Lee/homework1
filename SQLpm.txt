@@ -1,0 +1,70 @@
+create table students(
+
+id int primary key AUTO_INCREMENT,
+
+name varchar(8) not null,
+
+sex int not null,
+
+height int(3), 
+
+cid int
+)
+INSERT into students(name,sex,height,cid)values
+('li','1',178,1)
+INSERT into students(name,sex,height,cid)values
+('wang','1',170,1)
+INSERT into students(name,sex,height,cid)values
+('zhao4','1',175,2)
+INSERT into students(name,sex,height,cid)values
+('liuneng','1',170,2) 
+INSERT into students(name,sex,height,cid)values
+('zhaosiyu','0',160,1)
+INSERT into students(name,sex,height,cid)values
+('jin','0',167,2)
+
+create table classes(
+
+id int PRIMARY key AUTO_INCREMENT,
+
+name varchar(10) not null
+
+)
+insert into classes(name)values
+('class1')
+
+insert into classes(name)values
+('class2')
+
+CREATE table teachers(
+
+ id int primary key AUTO_INCREMENT,
+ 
+ name varchar(10) not null
+
+)
+
+insert into teachers(name) values
+('Mr.li')
+insert into teachers(name) values
+('Mr.wu')
+
+CREATE table c_s_t(
+ 
+ stuid int,
+ 
+ teaid int
+
+)
+insert into c_s_t(stuid) values (1)
+insert into c_s_t(stuid) values (2)
+insert into c_s_t(stuid) values (3)
+insert into c_s_t(stuid) values (4)
+insert into c_s_t(stuid) values (5)
+insert into c_s_t(stuid) values (6)
+
+alter table c_s_t add constraint primary key(stuid,teaid)
+
+alter table cst add constraint CONSTRAINT lrfk2 foreign key(teaid)
+
+references teachers(id)    // 这个外键插入了一个小时就是插不进去 老师我                                            是真不懂了
