@@ -1,0 +1,24 @@
+alter table csc add CONSTRAINT primary key(stuid,teaid)
+alter table csc add constraint lrfk03 foreign key(stuid) references
+
+students(id)         //之前这里一直写错 过不去
+
+alter table csc add constraint lrfk04 foreign key(teaid) references
+
+teachers(id)
+
+select   students.*   from   classes
+ 
+  inner join     //内部链接
+
+   students  on  classes.id = students.cid    
+                               //on后面接的是 inner join 前后两个table的连接条件
+   
+  where students.sex=1
+select students.name from students inner join csc on students.id=csc.stuid 
+
+inner join teachers on csc.teaid=teachers.id where teachers.name='Mr.wu'          
+
+select teachers.name from teachers inner join csc on teachers.id=csc.teaid
+inner join students on students.id=csc.stuid where students.name='li'
+
